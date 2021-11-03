@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+
+:root{
+    --primaryColor:#E32E00;
+    --accentColor: #EDEEF4;
+    --textColor: #6b6f81;
+}
+
+*{
+padding: 0;
+margin: 0;
+text-decoration: none;
+list-style-type: none;
+box-sizing: border-box;
+font-family: 'poppins' , sans-serif;
+}
+.top-header,
+.bottom-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .4rem 2rem;
+}
+
+.top-header{
+  background: var(--primaryColor);
+  color: #fff;
+}
+
+.nav-icons ion-icon{
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+
+
+.bottom-header{
+  padding: 1rem 2rem;
+}
+
+
+.brand{
+    display: flex;
+}
+
+.brand img{
+    margin-right: .5rem;
+}
+
+.brand h5{
+    font-size: 1.2rem;
+    color: #333;
+}
+
+nav ul{
+    display: flex;
+    
+}
+
+nav li{
+   margin-left: 1rem; 
+}
+
+nav li a{
+    font-size: .8rem;
+    color: var(--textColor);
+    font-weight: 500;
+}
+
+nav label{
+    font-size: 2rem;
+    display: none;
+}
+
+/*cart*/
+
+.cart-page{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.cart-info{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: #fff;
+    background: var(--primaryColor) ;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+
+td a{
+    color: var(--primaryColor);
+    font-size: 12px;
+}
+
+td img{
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+}
+
+.total-price{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.total-price table{
+    border-top: 3px solid var(--primaryColor);
+    width: 100%;
+    max-width: 400px;
+}
+
+td:last-child{
+    text-align: right;  
+}
+
+th:last-child{
+    text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Mobile nav*/
+#toggle-nav{
+    display: none;
+}
+
+#toggle-nav:checked ~ .mobile-nav{
+right: 0;
+}
+
+
+
+.mobile-nav{
+position: fixed;
+z-index: 100;
+height: 100%;
+right: -305px;
+top: 0;
+max-width: 300px;
+background: var(--accentColor);
+transition: right 300ms;
+}
+
+.mobile-nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem 1.5rem;
+}
+
+.close-btn label{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.mobile-nav-menu{
+    padding: .4rem 1.5rem;
+}
+
+.mobile-nav-menu li{
+  margin-bottom: 1rem;
+}
+
+.mobile-nav-menu li a{
+    font-size: 1.4rem;
+    color: #444;
+    font-weight: 600;
+}
+
+.hero-section{
+    height: 90vh;
+    background-image: url(images/tbi9a.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-section h1{
+    font-size: 2rem;
+    color: #060201;
+}
+
+.hero-section p{
+    font-size: 2.3rem;
+    color: #060201;
+}
+
+
+.wrapper{
+    width: 80%;
+    margin: auto;
+}
+
+.form-control{
+    width: 100%;
+    display: block;
+    height: 40px;
+    border: 1px solid #EDEEF4;
+    padding: .4rem 1rem;
+    outline: none;
+}
+
+.btn{
+    height: 40px;
+    padding: 0rem 2.5rem;
+    text-align: center;
+    outline: none;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.btn-main{
+    background: var(--primaryColor);
+    color: #fff;
+    border: 1px solid var(--primaryColor);
+}
+
+
+.hero-search{
+    padding: 1.4rem 0rem;
+    background: var(--accentColor);
+}
+
+.search-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem ;
+}
+
+.arrival-section{
+    padding: 3rem 0rem;
+}
+
+.section-header{
+    text-align: center;
+}
+
+.section-header h2{
+    font-size: 2.1rem;
+}
+
+.section-header span{
+    /* border-bottom: 3px solid var(--primaryColor); */
+    padding-bottom: .6rem;
+}
+
+.slider-wrapper{
+    margin-top: 3.8rem;
+}
+
+
+.slider-container{
+  outline: none !important;
+}
+
+
+.slide{
+    border: 1px solid var(--accentColor);
+    margin: 0rem 1.5rem;
+    outline: none !important;
+}
+
+.slide-img{
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+}
+
+.slide-badge{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid var(--primaryColor);
+    background: #fff;
+    border-radius: 50%;
+    padding: .5rem;
+    font-size: .75rem;
+    font-weight: 600;
+    
+
+}
+
+.slide-info{
+    padding: 1rem;
+    text-align: left;
+}
+
+.slide-info h3{
+    font-size: .9rem;
+    color: #333;
+    margin-bottom: .6rem;
+
+}
+
+.price{
+    margin-bottom: 1.2rem;
+}
+
+.price span{
+    font-weight: 700;
+    color: var(--primaryColor);
+    border: none !important;
+}
+
+.price span:last-child{
+    text-decoration: line-through;
+}
+
+.banner-section{
+    background-image: url(images/clay-pots-on-market-in-morocco.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+    background-position: center;
+}
+
+.banner-section .wrapper{
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+
+.banner-text {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.banner-text h1{
+    font-size: 3.5rem;
+    color: #333;
+}
+
+.banner-text p{
+    font-size: 2.4rem;
+    color: #333;
+    margin: 1rem;
+}
+
+.promo-grid{
+    display: grid;
+    grid-template-columns: 40% 30% 30%;
+    grid-gap: 2.5rem;
+    align-items: center ;
+}
+
+.promo-section .wrapper{
+    padding: 3rem 0rem;
+}
+
+.promo-banner-text{
+    text-align: center;
+}
+
+.promo-banner-text h2{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.promo-banner-text p{
+    font-size: 1.6rem;
+    color: #333;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+}
+
+.promo-banner-text button{
+    padding: .6rem 4rem;
+}
+
+.promo-card{
+    text-align: center;
+}
+
+.promo-card a{
+    font-weight: bold;
+    color: var(--textColor);
+}
+
+.promo-2{
+    background: #f4f5fa;
+    padding: 3.5rem 0rem;
+}
+
+.promo-2 .wrapper{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 2rem;
+}
+
+.promo-2 .promo-banner-text h2{
+  margin-bottom: 1rem;
+}
+
+.promo-2-text p{
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.promo-2-text span{
+    text-decoration: underline;
+}
+
+.promo-2-text span,
+.promo-2-text small{
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--textColor);
+    margin-right: 1rem;
+}
+
+.features-section{
+    padding: 3rem 0;
+}
+
+.features-grid{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+}
+
+.features-single{
+    text-align: center;
+}
+
+.features-single ion-icon{
+    font-size: 3rem;
+    color: var(--primaryColor);
+}
+
+.features-single div + span{
+    font-size: 1.1rem;
+    color: var(--textColor);
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.popular-brands{
+    background: #f4f5fa;
+    padding: 3rem 0rem;
+}
+.brand-header{
+    text-align: center;
+}
+
+.brand-header h2{
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: .6rem;
+}
+
+.brand-header p{
+    font-size: 1.5rem;
+    color: var(--textColor);
+    margin-bottom: 1rem;
+}
+
+.brands-grid{
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+}
+
+.brands-grid img{
+    width: 100% !important;
+}
+
+footer{
+    padding: 3rem 0rem;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 1.5rem;
+}
+
+.footer-card h4,
+.footer-form h4
+{
+   color: #333;
+}
+
+.footer-card span,
+.footer-form span
+{
+    font-size: .85rem;
+    color: var(--textColor);
+}
+
+.footer-card div{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2 , 1fr);
+}
+
+.footer-card li {
+    margin-bottom: .5rem;
+}
+
+.footer-card li a {
+   font-size: .8rem;
+   color: #444;
+}
+
+.footer-form div{
+    margin-top: .7rem;
+    display: flex;
+}
+
+.footer-form input{
+    flex: 1;
+}
+
+@media only screen and (max-width: 768px){
+    nav ul{
+        display: none;
+    }
+
+    nav label{
+     display: inline-block;
+    }
+
+
+    .search-grid{
+        grid-template-columns: repeat(2 , 1fr);
+    }
+
+    .promo-grid,
+    .promo-2 .wrapper{
+        grid-template-columns: 100%;
+    }
+
+    .features-grid,
+    .brands-grid{
+        grid-template-columns: repeat(3 , 1fr);
+    }
+
+    .footer-grid{
+        grid-template-columns: 100%;
+    }
+
+    .cart-info p{
+        display: none;
+    }
+
+}
+
+
